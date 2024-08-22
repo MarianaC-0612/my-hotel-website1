@@ -1,8 +1,3 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/rRpAl5o7vBn
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -33,12 +28,13 @@ import {
   Spa as Spade,
   Wifi,
 } from 'lucide-react';
+import Image from "next/image"
 export default function Component() {
   return (
     <div className="flex flex-col min-h-dvh">
-      <header className="w-full bg-primary text-primary-foreground py-4 px-6 md:px-10 lg:px-16 flex items-center justify-between">
-        <Link href="#" className="text-2xl font-bold" prefetch={false}>
-          Acme Hotel
+      <header className="w-full bg-customGrey text-customWhite py-4 px-6 md:px-10 lg:px-16 flex items-center justify-between">
+        <Link href="#" className="text-2xl font-bold text-customWhite" prefetch={false}>
+          My Hotel
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           <Link href="#" className="hover:underline" prefetch={false}>
@@ -59,50 +55,36 @@ export default function Component() {
       </header>
       <main className="flex-1">
         <section className="relative h-[70vh] md:h-[80vh] lg:h-[90vh]">
-          <img src="/placeholder.svg" alt="Hotel Exterior" fill className="object-cover" />
-          <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white px-4 md:px-10 lg:px-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Welcome to Acme Hotel</h1>
-            <p className="text-lg md:text-xl lg:text-2xl mb-8">Luxury accommodations in the heart of the city.</p>
-            <Button>Book Now</Button>
+          <Image src="/hotel-suite.jpg" width={500} height={500} alt="Hotel Exterior" />
+          <div className="absolute inset-0 bg-customWhite flex flex-col items-center justify-center text-white px-4 md:px-10 lg:px-16">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-customGold">Welcome to My Hotel</h1>
+            <p className="text-lg md:text-xl lg:text-2xl font-bold mb-4 text-customGold">Named the coolest hotel in Kent 23/24</p>
+            <Button>Book</Button>
           </div>
         </section>
-        <section id="rooms" className="py-12 md:py-16 lg:py-20 bg-muted">
+        <section id="rooms" className="py-12 md:py-16 lg:py-15 bg-muted">
           <div className="container px-4 md:px-10 lg:px-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">Our Rooms</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card>
-                <img
-                  src="/placeholder.svg"
-                  alt="Room 1"
-                  width={400}
-                  height={300}
-                  className="rounded-t-lg object-cover"
-                  style={{ aspectRatio: "400/300", objectFit: "cover" }}
-                />
+                <Image src="/hotel-suite.jpg" width={500} height={500} alt="Hotel Exterior" />
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-2">Deluxe Room</h3>
                   <p className="text-muted-foreground mb-4">
-                    Spacious room with king-size bed, en-suite bathroom, and city view.
+                    A spacious room with 2 medium-sized beds, an en-suite bathroom, and a beautiful city view.
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold">$199/night</span>
+                    <span className="text-2xl font-bold">£199/night</span>
                     <Button>Book Now</Button>
                   </div>
                 </CardContent>
               </Card>
               <Card>
-                <img
-                  src="/placeholder.svg"
-                  alt="Room 2"
-                  width={400}
-                  height={300}
-                  className="rounded-t-lg object-cover"
-                  style={{ aspectRatio: "400/300", objectFit: "cover" }}
-                />
+                <Image src="/hotelroom2.0.jpeg" width={500} height={300} alt="Room 2" />
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-2">Premium Room</h3>
                   <p className="text-muted-foreground mb-4">
-                    Luxurious room with king-size bed, en-suite bathroom, and private balcony.
+                    Luxurious room with a king-size bed, an en-suite bathroom, and private balcony.
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-bold">$299/night</span>
@@ -111,14 +93,7 @@ export default function Component() {
                 </CardContent>
               </Card>
               <Card>
-                <img
-                  src="/placeholder.svg"
-                  alt="Room 3"
-                  width={400}
-                  height={300}
-                  className="rounded-t-lg object-cover"
-                  style={{ aspectRatio: "400/300", objectFit: "cover" }}
-                />
+                <Image src="/room3.jpeg" width={500} height={300} alt="Room 2" />
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-2">Suite</h3>
                   <p className="text-muted-foreground mb-4">

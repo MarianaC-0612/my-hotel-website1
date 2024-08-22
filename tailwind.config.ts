@@ -52,6 +52,11 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Add your custom color here
+        customPink: "#FFCCD5",
+        customWhite: "#FFFAFA", 
+        customGold: "#B78727",
+        customGrey: "#333333",// Custom pink color
       },
       borderRadius: {
         lg: "var(--radius)",
